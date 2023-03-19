@@ -1,0 +1,1 @@
+//write a javascript code calculate a simple interest?
