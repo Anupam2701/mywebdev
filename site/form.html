@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Two Numbers</title>
+<script>
+  function addNumbers() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    
+    if (!isNaN(num1) && !isNaN(num2)) {
+      var sum = num1 + num2;
+      document.getElementById("result").innerHTML = "Sum: " + sum;
+    } else {
+      document.getElementById("result").innerHTML = "Please enter valid numbers.";
+    }
+  }
+</script>
+</head>
+<body>
+<div>
+  <h2>Add Two Numbers</h2>
+  <label for="num1">Number 1:</label>
+  <input type="text" id="num1" name="num1"><br>
+  
+  <label for="num2">Number 2:</label>
+  <input type="text" id="num2" name="num2"><br>
+  
+  <button onclick="addNumbers()">Add</button>
+  
+  <p id="result"></p>
+</div>
+</body>
+</html>
