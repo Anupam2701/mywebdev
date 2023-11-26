@@ -1,0 +1,8 @@
+<!-- todo-list.component.html -->
+<div *ngFor="let todo of todos; let i = index">
+    <app-todo-item [todo]="todo" (delete)="deleteTodo(i)"></app-todo-item>
+  </div>
+  
+  <input type="text" [(ngModel)]="todos" placeholder="Add new todo">
+  <button (click)="addTodo()">Add</button>
+  

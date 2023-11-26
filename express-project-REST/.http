@@ -1,0 +1,11 @@
+# POST request to add a new post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "First Post",
+    "content": "This is the content of the first post."
+}
+
+# GET request to retrieve all posts
+GET http://localhost:3000/posts

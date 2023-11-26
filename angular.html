@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Directives Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myController">
+    <h1>{{ greeting }}</h1>
+
+    <!-- ng-if example -->
+    <p ng-if="showMessage">This message is displayed using ng-if.</p>
+
+    <!-- ng-for example -->
+    <ul>
+        <li ng-repeat="fruit in fruits">{{ fruit }}</li>
+    </ul>
+
+    <!-- ng-switch example -->
+    <div ng-switch="selectedItem">
+        <p ng-switch-when="apple">You selected an apple.</p>
+        <p ng-switch-when="banana">You selected a banana.</p>
+        <p ng-switch-default>Select a fruit.</p>
+    </div>
+
+    <!-- ng-model example -->
+    <input type="text" ng-model="textModel">
+    <p>You entered: {{ textModel }}</p>
+</div>
+
+<script>
+    angular.module("myApp", [])
+        .controller("myController", function ($scope) {
+            $scope.greeting = "Welcome to AngularJS Directives Example!";
+            $scope.showMessage = true;
+            $scope.fruits = ["apple", "banana", "cherry"];
+            $scope.selectedItem = "banana";
+        });
+</script>
+
+</body>
+</html>
